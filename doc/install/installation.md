@@ -73,13 +73,36 @@ Make sure you have the right version of Python installed.
 mail server. By default, Debian is shipped with exim4 whereas Ubuntu
 does not ship with one. The recommended mail server is postfix and you can install it with:
 
-	sudo apt-get install -y postfix 
+    sudo apt-get install -y postfix 
 
 Then select 'Internet Site' and press enter to confirm the hostname.
 
 # 2. Ruby
 
-Remove the old Ruby 1.8 if present
+The Ruby interpreter is required to execute the GitLab scripts.
+
+## 2.1 Install from repo
+
+In the latest versions of Debian, you can install Ruby 1.9.x directly from the repo.
+
+Debian 7/Wheezy:
+
+    sudo apt-get install -y ruby ruby-dev
+    
+Debian 6/Squeeze:
+
+    sudo apt-get install -y ruby1.9.1 ruby1.9.1-dev
+
+Then install the Bundler Gem:
+
+    sudo gem install bundler --no-ri --no-rdoc
+
+## 2.2 Install from source
+
+For older versions of Debian, or if Ruby 1.9.x isn't available on your distro repo,
+you have build and install it manually.
+
+Remove the old Ruby 1.8 if present:
 
     sudo apt-get remove -y ruby1.8
 
@@ -92,7 +115,7 @@ Download Ruby and compile it:
     make
     sudo make install
 
-Install the Bundler Gem:
+Then install the Bundler Gem:
 
     sudo gem install bundler --no-ri --no-rdoc
 
