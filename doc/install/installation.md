@@ -81,7 +81,7 @@ Then select 'Internet Site' and press enter to confirm the hostname.
 
 The Ruby interpreter is required to execute the GitLab scripts.
 
-## 2.1 Install from repo
+## a) Install from repo
 
 In the latest versions of Debian and Ubuntu, you can install Ruby 1.9.x directly from the repo.
 
@@ -104,9 +104,9 @@ Then install the Bundler Gem:
     sudo gem install bundler --no-ri --no-rdoc
 
 
-## 2.2 Install from source
+## b) Install from source
 
-For older versions of Debian, or if Ruby 1.9.x isn't available on your distro repo,
+For older versions of Debian and Ubuntu, or if Ruby 1.9.x isn't available on your distro repo,
 you have build and install it manually.
 
 Remove the old Ruby 1.8 if present:
