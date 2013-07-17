@@ -83,19 +83,26 @@ The Ruby interpreter is required to execute the GitLab scripts.
 
 ## 2.1 Install from repo
 
-In the latest versions of Debian, you can install Ruby 1.9.x directly from the repo.
+In the latest versions of Debian and Ubuntu, you can install Ruby 1.9.x directly from the repo.
 
-Debian 7/Wheezy:
+Debian 7/Wheezy, Ubuntu 12.10/Quantal and 13.04/Raring:
 
     sudo apt-get install -y ruby ruby-dev
     
-Debian 6/Squeeze:
+Debian 6/Squeeze, Ubuntu 10.04/Lucid LTS and 12.04/Precise LTS:
 
     sudo apt-get install -y ruby1.9.1 ruby1.9.1-dev
+
+Update alternatives for Ruby and RubyGems, and confirm version:
+
+    sudo update-alternatives --config ruby
+    sudo update-alternatives --config gem
+    ruby --version
 
 Then install the Bundler Gem:
 
     sudo gem install bundler --no-ri --no-rdoc
+
 
 ## 2.2 Install from source
 
@@ -114,6 +121,12 @@ Download Ruby and compile it:
     ./configure
     make
     sudo make install
+
+Update alternatives for Ruby and RubyGems, and confirm version:
+
+    sudo update-alternatives --config ruby
+    sudo update-alternatives --config gem
+    ruby --version
 
 Then install the Bundler Gem:
 
